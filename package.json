@@ -4,7 +4,14 @@
   "description": "![Hacktoberfest2023](https://socialify.git.ci/dev-AshishRanjan/Hacktoberfest2023/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Auto)",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write ."
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,json,md,css,scss,astro,html,css,scss}": [
+      "npm run format",
+      "git add"
+    ]
   },
   "keywords": [
     "frontend",
@@ -12,5 +19,10 @@
     "database"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3"
+  }
 }

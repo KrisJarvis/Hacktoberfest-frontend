@@ -1,10 +1,10 @@
 /* Importing Google font - Open Sans */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 body {
   display: flex;
@@ -131,7 +131,7 @@ body {
   max-width: 130px;
   margin-bottom: 20px;
 }
-.game-modal img[src="images/victory.gif"] {
+.game-modal img[src='images/victory.gif'] {
   margin-left: -10px;
 }
 .game-modal h4 {

@@ -2,9 +2,9 @@
 
 // code for fetch
 let ProjectList;
-const projectBody = document.querySelector(".projects");
+const projectBody = document.querySelector('.projects');
 
-fetch("./contribution/ProjectList.json")
+fetch('./contribution/ProjectList.json')
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -16,22 +16,22 @@ fetch("./contribution/ProjectList.json")
     console.log({ ProjectList });
     // code for cards creation on homepage
     ProjectList.map((project) => {
-      const card = document.createElement("a");
-      card.classList.add("card");
-      card.setAttribute("href", project.FilePath);
-      const h3 = document.createElement("h3");
-      const p = document.createElement("p");
-      const tags = document.createElement("div");
-      tags.classList.add("tags");
+      const card = document.createElement('a');
+      card.classList.add('card');
+      card.setAttribute('href', project.FilePath);
+      const h3 = document.createElement('h3');
+      const p = document.createElement('p');
+      const tags = document.createElement('div');
+      tags.classList.add('tags');
       project.tags.forEach((ele) => {
-        var tag = document.createElement("span");
+        var tag = document.createElement('span');
         tag.innerHTML = ele;
-        tag.classList.add("tag");
+        tag.classList.add('tag');
         tags.appendChild(tag);
       });
-      const author=document.createElement("a");
-      author.innerHTML="Author: "+project.Author;
-      author.setAttribute("href",project.Github);
+      const author = document.createElement('a');
+      author.innerHTML = 'Author: ' + project.Author;
+      author.setAttribute('href', project.Github);
       h3.innerText = project.Name;
       p.innerHTML = project.Description;
       card.appendChild(h3);
@@ -41,4 +41,4 @@ fetch("./contribution/ProjectList.json")
       projectBody.appendChild(card);
     });
   })
-  .catch((error) => console.error("Error loading JSON file:", error));
+  .catch((error) => console.error('Error loading JSON file:', error));

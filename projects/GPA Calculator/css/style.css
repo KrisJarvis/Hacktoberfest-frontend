@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 :root {
   --main-color: #dde0f1;
 }
@@ -37,8 +37,8 @@ a {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background: var(--main-color) url("../imgs/early-birds.png");
+  font-family: 'Poppins', sans-serif;
+  background: var(--main-color) url('../imgs/early-birds.png');
   background-position: right bottom;
   background-size: 100% auto;
   font-size: 2rem;
@@ -240,7 +240,7 @@ body {
   }
 }
 .semi-donut::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 6%;
@@ -292,7 +292,7 @@ body {
 }
 
 .header .logo a span::before {
-  content: "";
+  content: '';
   position: absolute;
   background: transparent;
   width: 40px;
@@ -304,7 +304,7 @@ body {
 }
 
 .header .logo a span::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -8px;
   right: -8px;

@@ -33,7 +33,7 @@
 
 Hacktoberfest has came with it's 10 season to promote Open-Source Contribution.  
 This is a Database for Frontend Projects created using : HTML, CSS, JS  
-**After Learning how to contribute using this repo, go to our real world project [Idea-Arca](https://github.com/dev-AshishRanjan/Idea-Arca). It's also up for Hacktoberfest.**  
+**After Learning how to contribute using this repo, go to our real world project [Idea-Arca](https://github.com/dev-AshishRanjan/Idea-Arca). It's also up for Hacktoberfest.**
 
 ## Tech Stack
 
@@ -46,15 +46,16 @@ This is a Database for Frontend Projects created using : HTML, CSS, JS
 ## To Do
 
 These are the changes you can make.  
-Steps to contribute to this project:  
+Steps to contribute to this project:
 
 1._ADD your `Project files` of **HTML,CSS,JS** in `./projects/` directory_
 
 - You have to add your own files first in `./projects/`  
-Your project has to be a project of HTML+CSS+JS, where js is not mandatory. Or all 3 files can be merged in _index.html_ also.
+  Your project has to be a project of HTML+CSS+JS, where js is not mandatory. Or all 3 files can be merged in _index.html_ also.
 - You can see this project for reference : `./projects/Example-Project`.
 
-2._ADD your information in `./contribution/ProjectList.json` file_
+  2._ADD your information in `./contribution/ProjectList.json` file_
+
 - Copy-paste this below code and modify it with your own details
 
   ```json
@@ -78,8 +79,7 @@ Your project has to be a project of HTML+CSS+JS, where js is not mandatory. Or a
 
 ### Process of Contribution
 
-1._Fork_ : Fork this GitHub Repo to your own github account
-2._Clone_ : Clone the forked repo (the repo present on your account) to your local machine.
+1._Fork_ : Fork this GitHub Repo to your own github account 2._Clone_ : Clone the forked repo (the repo present on your account) to your local machine.
 
 ```terminal
 git clone https://github.com/dev-AshishRanjan/Hacktoberfest-frontend.git

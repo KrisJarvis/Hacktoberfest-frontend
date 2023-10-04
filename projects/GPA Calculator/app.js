@@ -1,7 +1,7 @@
-const button = document.querySelector(".group__header-remove");
-const groupList = document.querySelector(".groupList");
-const addSemesterButton = document.querySelector(".addSemester");
-const semiDonut = document.querySelector(".semi-donut");
+const button = document.querySelector('.group__header-remove');
+const groupList = document.querySelector('.groupList');
+const addSemesterButton = document.querySelector('.addSemester');
+const semiDonut = document.querySelector('.semi-donut');
 
 class Course {
   constructor(grade, credit) {
@@ -11,10 +11,10 @@ class Course {
 }
 
 let DOMstrings = {
-  itemValue: ".item__value",
-  itemName: ".item__name",
-  itemSelect: ".item__select",
-  group: ".group",
+  itemValue: '.item__value',
+  itemName: '.item__name',
+  itemSelect: '.item__select',
+  group: '.group',
 };
 
 function init() {
@@ -25,7 +25,7 @@ function init() {
 
 function updateGraph(gpa) {
   let percentage = (gpa * 100) / 10;
-  semiDonut.style.setProperty("--percentage", `${percentage}`);
+  semiDonut.style.setProperty('--percentage', `${percentage}`);
 }
 
 function getInputs() {
@@ -41,7 +41,7 @@ function getInputs() {
 function setInputEventListener() {
   let inputs = getInputs();
   inputs.allSelect.forEach((e) => {
-    e.addEventListener("change", () => {
+    e.addEventListener('change', () => {
       calcGpa(inputs);
     });
   });
@@ -50,7 +50,7 @@ function setInputEventListener() {
     calcGpa(inputs);
     if (i !== Object.keys(inputs).length - 1) {
       inputs[value].forEach((e) => {
-        e.addEventListener("keyup", () => {
+        e.addEventListener('keyup', () => {
           calcGpa(inputs);
         });
       });
@@ -58,11 +58,11 @@ function setInputEventListener() {
   });
 }
 
-groupList.addEventListener("click", (e) => {
+groupList.addEventListener('click', (e) => {
   let btn = e.target;
   let inputs = getInputs();
 
-  if (btn.classList.contains("addCourseBtn")) {
+  if (btn.classList.contains('addCourseBtn')) {
     let course = `<li class="item" id="item-0">
         <input type="text" placeholder="Course name" class="item__name">
         <select name="" id="itemSelect-0" class="item__select">
@@ -84,20 +84,20 @@ groupList.addEventListener("click", (e) => {
         </select>
         <button class="remove removeItem"><i class="fas fa-trash-alt"></i></button>
         </li>`;
-    let el = btn.parentNode.querySelector(".group__items");
+    let el = btn.parentNode.querySelector('.group__items');
 
-    el.insertAdjacentHTML("beforeend", course);
+    el.insertAdjacentHTML('beforeend', course);
   }
 
-  if (btn.classList.contains("removeItem")) {
+  if (btn.classList.contains('removeItem')) {
     btn.parentNode.parentNode.removeChild(btn.parentNode);
   }
 
-  if (btn.classList.contains("removeSemester")) {
+  if (btn.classList.contains('removeSemester')) {
     btn.parentNode.parentNode.parentNode.removeChild(btn.parentNode.parentNode);
   }
 
-  if (btn.classList.contains("addSemester")) {
+  if (btn.classList.contains('addSemester')) {
     newSemester(btn, inputs);
   }
   setInputEventListener();
@@ -139,7 +139,7 @@ function newSemester(btn, inputs) {
         </div>
         <button  class="btn addCourseBtn"><i class="fas fa-folder-plus"></i>Add course</button>
     </div>`;
-  btn.insertAdjacentHTML("beforebegin", el);
+  btn.insertAdjacentHTML('beforebegin', el);
 }
 
 function calcGpa(obj) {
@@ -175,17 +175,17 @@ function calcGpa(obj) {
     });
     semesterGpa = semesterGradePoints / semesterCredits;
     if (!isNaN(semesterGpa)) {
-      e.querySelector(".partial").innerHTML = semesterGpa.toFixed(2);
+      e.querySelector('.partial').innerHTML = semesterGpa.toFixed(2);
     } else {
-      e.querySelector(".partial").innerHTML = "0.00";
+      e.querySelector('.partial').innerHTML = '0.00';
     }
   });
   gpa = totalGradePoints / totalCredits;
   if (!isNaN(gpa)) {
-    document.querySelector(".totals__value").innerHTML = gpa.toFixed(2);
+    document.querySelector('.totals__value').innerHTML = gpa.toFixed(2);
     updateGraph(gpa.toFixed(2));
   } else {
-    document.querySelector(".totals__value").innerHTML = "0.00";
+    document.querySelector('.totals__value').innerHTML = '0.00';
     updateGraph(0.0);
   }
 }
